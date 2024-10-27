@@ -1,9 +1,10 @@
 # UCLA BLOG
-> <img src="icon.png" align="right"/>
-Individual and Group Experiences at UCLA
 
+<img src="icon.png" align="right" width="128" height="128"/> <br>
+Individual and Group Experiences at UCLA <br>
+Collaborative Blog <br>
 
-### CONTENT:
+## CONTENT:
 Dining and Food
 
 Clubs Activities
