@@ -1,15 +1,16 @@
-# UCLA BLOG
-> <img src="icon.png" align="right"/>
-Individual and Group Experiences at UCLA
+# UCLA BLOG 
+<img src="icon.png" align="right" width="128" height="128"/> <br>
+> Individual and Group Experiences at UCLA
+> 
+> Collaborative Blog
 
+## CONTENT:
+- Dining and Food
 
-### CONTENT:
-Dining and Food
+- Clubs Activities
 
-Clubs Activities
+- Sports and Athletic Events
 
-Sports and Athletic Events
+- Academics
 
-Academics
-
-Surrounding LA Area
+- Surrounding LA Area
