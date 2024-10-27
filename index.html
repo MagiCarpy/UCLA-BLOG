@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>UCLA BLOG</title>
+        
+        <meta name="description" content="UCLA Blog Description"> 
+        
+        <!-- <base href="https://example.com/page.html"> -->
+
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <header>
+            <h1>UCLA BLOG</h1>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button id="dropbtn" onclick="openCloseNav()">
+                        &#8801;
+                    </button>
+                </div>
+                <a href="">Home</a>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="">Events and Activities</a>
+                <a href="">Dining and Food</a>
+                <a href="">Sports and Athletics</a>
+                <a href="">Academics</a>
+                <a href="">Los Angeles</a>
+            </div>
+        
+        </header>
+
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0px";
+            }
+
+            function openCloseNav() {
+                console.log(document.getElementById("mySidenav").style.width)
+                if (document.getElementById("mySidenav").style.width == "0px" || document.getElementById("mySidenav").style.width == 0) {
+                    document.getElementById("mySidenav").style.width = "250px";
+                } else {
+                    document.getElementById("mySidenav").style.width = "0px";
+                }
+            }
+        </script>
+
+    </body>
+</html>
