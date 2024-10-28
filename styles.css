@@ -7,17 +7,17 @@
   background-color: #ffffff; /* Navbar background */
   position: fixed; /* Fix the navbar at the top */
   top: -1px;
-  left: -1px;
+  left: -15px;
   width: 100%; /* Full width */
   outline: 5px solid rgb(0, 85, 135);
   display: flex; /* Flexbox for alignment */
+  align-items: center;
   justify-content: center; /* Center align */
   padding: 15px; /* Padding for the navbar */
   z-index: 1000; /* Ensure it stays on top */
 }
 
 #home {
-  display: grid;
   align-items: center;
   justify-content: center;
   color: rgb(0, 85, 135);
@@ -27,7 +27,7 @@
 
 #dropbtn {
   position: absolute; /* Position to the left */
-  left: -1px;
+  left: 15px;
   top: -1px; /* Distance from the left */
   color: rgb(0, 85, 135); /* Text color */
   border: none; /* No border */
@@ -41,9 +41,7 @@
   background-color: rgba(0, 0, 0, 0.349);
 }
 
-
-
-.sidenav {
+#dropdown {
   height: 0;
   width: 200px;
   position: fixed;
@@ -57,20 +55,47 @@
   z-index: 100;
 }
 
-.sidenav a {
+#dropdown a {
   padding: 15px 20px 20px 10px;
   text-decoration: none;
   filter: none;
   font-size: 18px;
-  color: #ffffff;
+  color: rgb(0, 85, 135);
   opacity: 5;
   display: block;
   transition: 0.3s;
   z-index: 500;
 }
 
-.sidenav a:hover {
+#dropdown a:hover {
   color: #808080;
 }
 
 
+
+.container {
+  padding: 100px 100px 100px 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  height: 400px;
+  width: 400 px;
+  gap: 100px;
+}
+
+.containerItem {
+  outline: 2px solid rgb(0, 0, 0);
+  min-height: 400px;
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.containerItem:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.containerText {
+  padding: 5px 5px 5px 5px;
+  
+}
