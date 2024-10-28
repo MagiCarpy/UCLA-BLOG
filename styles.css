@@ -33,7 +33,7 @@
   border: none; /* No border */
   padding: 15px; /* Padding */
   cursor: pointer; /* Pointer cursor */
-  font-size: 17px; /* Font size */
+  font-size: 20px; /* Font size */
 }
 
 /* Add a red background color to navbar links on hover */
