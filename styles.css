@@ -1,77 +1,76 @@
-body {
-  font-family: "Lato", sans-serif;
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+* {
+  font-family: "Red Hat Mono", monospace;
 }
-h1 {
-  margin-right: 50;
-}
+
 .navbar {
-  overflow: hidden;
-  background-color: #333;
+  background-color: #ffffff; /* Navbar background */
+  position: fixed; /* Fix the navbar at the top */
+  top: -1px;
+  left: -1px;
+  width: 100%; /* Full width */
+  outline: 5px solid rgb(0, 85, 135);
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center align */
+  padding: 15px; /* Padding for the navbar */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 14px;
+#home {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 85, 135);
   text-decoration: none;
+  z-index: 1000;
 }
 
-/* The dropdown container */
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown #dropbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+#dropbtn {
+  position: absolute; /* Position to the left */
+  left: -1px;
+  top: -1px; /* Distance from the left */
+  color: rgb(0, 85, 135); /* Text color */
+  border: none; /* No border */
+  padding: 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 17px; /* Font size */
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, #dropbtn:hover {
-  background-color: red;
+#dropbtn:hover {
+  background-color: rgba(0, 0, 0, 0.349);
 }
 
 
 
 .sidenav {
-  height: 100%;
-  width: 0;
+  height: 0;
+  width: 200px;
   position: fixed;
-  z-index: 1;
-  top: 250;
+  top: 0;
   left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
+  background-color: #111111f8;
+  opacity: 1;
+  overflow-y: hidden;
+  transition: 0.8s;
+  padding-top: 45px;
+  z-index: 100;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 15px 20px 20px 10px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  filter: none;
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 5;
   display: block;
   transition: 0.3s;
+  z-index: 500;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #808080;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+

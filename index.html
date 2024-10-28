@@ -15,14 +15,11 @@
 
     <body>
         <header>
-            <h1>UCLA BLOG</h1>
             <div class="navbar">
-                <div class="dropdown">
-                    <button id="dropbtn" onclick="openCloseNav()">
-                        &#8801;
-                    </button>
+                <div id="dropbtn" onclick="openCloseNav()">
+                    &#8801;
                 </div>
-                <a href="">Home</a>
+                <a href="" id="home">UCLA BLOG</a>
             </div>
 
             <div id="mySidenav" class="sidenav">
@@ -32,26 +29,32 @@
                 <a href="">Academics</a>
                 <a href="">Los Angeles</a>
             </div>
-        
         </header>
 
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+            <a>UCLA BLOG</a> <br><br><br><br><br><br><br>
+
+
         <script>
-            function openNav() {
-              document.getElementById("mySidenav").style.width = "250px";
-            }
-            
-            function closeNav() {
-              document.getElementById("mySidenav").style.width = "0px";
-            }
 
             function openCloseNav() {
-                console.log(document.getElementById("mySidenav").style.width)
-                if (document.getElementById("mySidenav").style.width == "0px" || document.getElementById("mySidenav").style.width == 0) {
-                    document.getElementById("mySidenav").style.width = "250px";
+                console.log(document.getElementById("mySidenav").style.height)
+                if (document.getElementById("mySidenav").style.height == "0%" || document.getElementById("mySidenav").style.height == 0) {
+                    document.getElementById("mySidenav").style.height = "100%";
                 } else {
-                    document.getElementById("mySidenav").style.width = "0px";
+                    document.getElementById("mySidenav").style.height = "0%";
                 }
             }
+
         </script>
 
     </body>
