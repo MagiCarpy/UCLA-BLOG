@@ -20,13 +20,16 @@
             </div>
             <a href="" id="home"><bold>UCLA</bold></a>
         </div>
+        <div>
 
-        <div id="dropdown">
-            <a href="">Events and Activities</a>
-            <a href="">Dining and Food</a>
-            <a href="">Sports and Athletics</a>
-            <a href="">Academics</a>
-            <a href="">Los Angeles</a>
+        </div id="navDiv">
+            <div id="dropdown">
+                <a href="">Events and Activities</a>
+                <a href="">Dining and Food</a>
+                <a href="">Sports and Athletics</a>
+                <a href="">Academics</a>
+                <a href="">Los Angeles</a>
+            </div>
         </div>
         
 
@@ -78,15 +81,17 @@
 
 
         <script>
+            document.getElementById('dropbtn').addEventListener('click', function() {
+                const dropdown = document.getElementById('dropdown');
+                dropdown.classList.toggle('show'); // Toggle the 'show' class
 
-            function openCloseNav() {
-                if (document.getElementById("dropdown").style.height == "0%" || document.getElementById("dropdown").style.height == 0) {
-                    document.getElementById("dropdown").style.height = "100%";
+                // Check if dropdown is shown
+                if (dropdown.classList.contains('show')) {
+                    dropdown.style.maxHeight = dropdown.scrollHeight + "px"; // Set to actual height
                 } else {
-                    document.getElementById("dropdown").style.height = "0%";
+                    dropdown.style.maxHeight = "0"; // Reset to 0 height
                 }
-            }
-
+            });
             function clickContainer(pageLink) {
                 window.location.href = pageLink;
             }

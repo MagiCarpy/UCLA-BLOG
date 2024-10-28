@@ -4,20 +4,22 @@
 }
 
 .navbar {
-  background-color: #ffffff; /* Navbar background */
+  background-color: rgba(184, 213, 228, 0.884); /* Navbar background */
   position: fixed; /* Fix the navbar at the top */
   top: -1px;
   left: -15px;
-  width: 100%; /* Full width */
+  width: 100%; 
   outline: 5px solid rgb(0, 85, 135);
-  display: flex; /* Flexbox for alignment */
+  display: flex; 
   align-items: center;
-  justify-content: center; /* Center align */
-  padding: 15px; /* Padding for the navbar */
-  z-index: 1000; /* Ensure it stays on top */
+  justify-content: center; 
+  padding: 15px;
+  z-index: 1000;
 }
 
 #home {
+  font-size: 20px;
+  letter-spacing: 2px;
   align-items: center;
   justify-content: center;
   color: rgb(0, 85, 135);
@@ -26,69 +28,76 @@
 }
 
 #dropbtn {
-  position: absolute; /* Position to the left */
+  position: absolute;
   left: 15px;
-  top: -1px; /* Distance from the left */
-  color: rgb(0, 85, 135); /* Text color */
-  border: none; /* No border */
-  padding: 15px; /* Padding */
-  cursor: pointer; /* Pointer cursor */
-  font-size: 20px; /* Font size */
+  top: -1px;
+  color: rgb(0, 85, 135);
+  border: none; 
+  padding: 15px; 
+  cursor: pointer; 
+  font-size: 21px; 
 }
 
 /* Add a red background color to navbar links on hover */
-#dropbtn:hover {
-  background-color: rgba(0, 0, 0, 0.349);
+
+#navDiv {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding for spacing */
+  box-sizing: border-box; /* Include padding in width calculation */
+  position: relative; /* Positioning for dropdown */
 }
 
 #dropdown {
-  height: 0;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #111111f8;
-  opacity: 1;
-  overflow-y: hidden;
-  transition: 0.8s;
-  padding-top: 45px;
-  z-index: 100;
+
+  width: 100%;
+  max-height: 0; /* Start with no height */
+  overflow: hidden; /* Hide overflow */
+  transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+  opacity: 0; /* Start invisible */
+  position: fixed; /* Position dropdown */
+  left: 0; /* Align to the left */
+  top: 55px; /* Adjust position below button */
+  background-color: rgba(184, 213, 228, 0.808); /* Background color of dropdown */
+  box-shadow: 0px 8px 16px rgba(62, 72, 77, 0.808); /* Shadow effect */
+  z-index: 1; /* Ensure it appears above other elements */
+}
+
+#dropdown.show {
+  max-height: 500px; /* Set a max height for the dropdown when shown */
+  opacity: 1; /* Make it visible */
 }
 
 #dropdown a {
-  padding: 15px 20px 20px 10px;
-  text-decoration: none;
-  filter: none;
-  font-size: 18px;
-  color: rgb(0, 85, 135);
-  opacity: 5;
-  display: block;
-  transition: 0.3s;
-  z-index: 500;
+  color: black; /* Link color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make links block elements */
+  padding: 10px; /* Padding for links */
+  text-align: center; /* Center text */
 }
 
-#dropdown a:hover {
-  color: #808080;
+#dropdown a:hover, #dropbtn:hover, #home:hover{
+  color: #f1f1f1; /* Background on hover */
 }
-
 
 
 .container {
-  padding: 100px 100px 100px 100px;
+  padding: 100px 175px 100px 175px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  height: 400px;
-  width: 400 px;
-  gap: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  height: 600px;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
 
 .containerItem {
   outline: 2px solid rgb(0, 0, 0);
   min-height: 400px;
   max-height: 400px;
+  max-width: 900px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.7s, box-shadow 0.7s;
 }
 .containerItem:hover {
   transform: translateY(-10px);
