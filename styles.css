@@ -97,20 +97,19 @@ body {
 
 /* Home page story boxes */
 .container {
-  display: grid;
-  margin-right: 50px;
-  margin-left: 50px;
-  margin-top: 25px;
+  display: flex;
   grid-gap: 50px;
+  gap: 50px;
+  flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
-  align-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  align-content: center; 
 }
 
 .containerItem {
   outline: 2px solid rgb(0, 0, 0);
+  height: 400px;
+  width: 400px;
   min-height: 400px;
   max-height: 400px;
   max-width: 500px;
@@ -125,7 +124,7 @@ body {
 }
 
 .containerText {
-  padding: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
   
 }
 
