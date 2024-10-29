@@ -1,19 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
 * {
   font-family: "Red Hat Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 75%
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Top navigation bar */
 .navbar {
   background-color: rgba(184, 213, 228, 0.884); /* Navbar background */
-  position: fixed; /* Fix the navbar at the top */
-  top: -1px;
-  left: -15px;
+  position: fixed;
   width: 100%; 
   outline: 5px solid rgb(0, 85, 135);
   display: flex; 
   align-items: center;
   justify-content: center; 
-  padding: 15px;
+  padding-block: 15px;
   z-index: 1000;
 }
 
@@ -29,7 +41,7 @@
 
 #dropbtn {
   position: absolute;
-  left: 15px;
+  left: 0px;
   top: -1px;
   color: rgb(0, 85, 135);
   border: none; 
@@ -38,23 +50,22 @@
   font-size: 21px; 
 }
 
-/* Add a red background color to navbar links on hover */
 
+/* Drop down from top navigation bar */
 #navDiv {
+  position: relative;
   width: 100%; /* Full width */
   padding: 10px; /* Padding for spacing */
   box-sizing: border-box; /* Include padding in width calculation */
-  position: relative; /* Positioning for dropdown */
 }
 
 #dropdown {
-
+  position: fixed;
   width: 100%;
   max-height: 0; /* Start with no height */
   overflow: hidden; /* Hide overflow */
   transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
   opacity: 0; /* Start invisible */
-  position: fixed; /* Position dropdown */
   left: 0; /* Align to the left */
   top: 55px; /* Adjust position below button */
   background-color: rgba(184, 213, 228, 0.808); /* Background color of dropdown */
@@ -68,33 +79,42 @@
 }
 
 #dropdown a {
-  color: black; /* Link color */
-  text-decoration: none; /* Remove underline */
-  display: block; /* Make links block elements */
-  padding: 10px; /* Padding for links */
-  text-align: center; /* Center text */
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  text-align: center; 
 }
 
 #dropdown a:hover, #dropbtn:hover, #home:hover{
-  color: #f1f1f1; /* Background on hover */
+  color: #f1f1f1; /* Text change on hover */
 }
 
-
-.container {
-  padding: 100px 175px 100px 175px;
+.wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-  height: 600px;
-  gap: 50px;
+  grid-gap: 75px;
+}
+
+/* Home page story boxes */
+.container {
+  display: grid;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 25px;
+  grid-gap: 50px;
   justify-content: center;
+  justify-items: center;
+  align-content: center;
   align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .containerItem {
   outline: 2px solid rgb(0, 0, 0);
   min-height: 400px;
   max-height: 400px;
-  max-width: 900px;
+  max-width: 500px;
+  min-width: 300px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.7s, box-shadow 0.7s;
@@ -107,4 +127,13 @@
 .containerText {
   padding: 5px 5px 5px 5px;
   
+}
+
+
+/* Footer */
+footer {
+  /* position: absolute; */
+  height: 100px;
+  width: 100%;
+  background: #eee;
 }
